@@ -2,6 +2,9 @@ package com.paulo.back.model;
 
 import java.time.LocalDateTime;
 
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,12 +24,14 @@ public class Enterprise {
     @Column(length= 50, nullable= false)
     private String createdBy;
 
+    @CreatedDate
     @Column(nullable= false)
     private LocalDateTime createdDate;
 
     @Column(length= 50, nullable= false)
     private String modifiedBy;
 
+    @LastModifiedDate
     @Column(nullable= false)
     private LocalDateTime modifiedDate;
 
