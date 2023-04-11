@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'enterprises' },
   {
     path: 'enterprises',
     loadChildren: () => import('./enterprises/enterprises.module').then(m => m.EnterprisesModule)

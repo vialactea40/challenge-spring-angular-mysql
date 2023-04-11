@@ -24,6 +24,10 @@ export class EnterprisesComponent {
     console.log("O construtor está rodando");
   }
 
+  refresh() {
+    this.enterprises$ = this.enterprisesService.list()
+    console.log("Dando refresh");
+  }
 
 
   onAdd() {
@@ -36,5 +40,6 @@ export class EnterprisesComponent {
 
   onDelete(element: Enterprise) {
     this.enterprisesService.remove(element._id).subscribe(result => console.log(result));
+    this.refresh();
   }
 }
