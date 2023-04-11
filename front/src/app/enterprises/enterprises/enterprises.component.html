@@ -1,1 +1,48 @@
-<p>enterprises works!</p>
+<mat-card>
+  <mat-toolbar color="primary"> Cursos Cadastrados </mat-toolbar>
+
+  <table mat-table [dataSource]="enterprises$" class="mat-elevation-z8">
+    <ng-container matColumnDef="_id">
+      <th mat-header-cell *matHeaderCellDef>Enterprise ID</th>
+      <td mat-cell *matCellDef="let element">{{ element._id }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Enterprise Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="phone">
+      <th mat-header-cell *matHeaderCellDef>Phone</th>
+      <td mat-cell *matCellDef="let element">{{ element.category }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>
+        <button mat-icon-button color="accent" aria-label="Adicionar um curso" (click)="onAdd()">
+          <mat-icon>add</mat-icon>
+        </button>
+      </th>
+      <mat-cell *matCellDef="let element">
+        <button mat-icon-button color="primary" aria-label="Editar um curso" (click)="onEdit(element)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" aria-label="Deletar um curso" (click)="onDelete(element)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+
+    <ng-template #loading>
+      <div class="loading-spinner">
+      <mat-spinner></mat-spinner>
+      </div>
+    </ng-template>
+
+
+</mat-card>
