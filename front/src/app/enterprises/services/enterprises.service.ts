@@ -44,6 +44,8 @@ export class EnterprisesService {
   }
 
   remove(id: string) {
+    console.log("O remove do services está sendo chamado para " + `${this.API}/${id}`);
+    console.log (this.httpClient.delete(`${this.API}/${id}`));
     return this.httpClient.delete(`${this.API}/${id}`);
   }
 }

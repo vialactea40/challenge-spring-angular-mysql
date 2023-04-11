@@ -35,6 +35,6 @@ export class EnterprisesComponent {
   }
 
   onDelete(element: Enterprise) {
-    this.enterprisesService.remove(element._id);
+    this.enterprisesService.remove(element._id).subscribe(result => console.log(result));
   }
 }
