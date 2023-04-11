@@ -1,0 +1,27 @@
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="enterprises">
+        <mat-icon>account_balance</mat-icon>
+        <span>Enterprises</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>file_copy</mat-icon>
+        <span>Departments</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>directions_run</mat-icon>
+        <span>Employees</span>
+      </button>
+    </mat-menu>
+    <span>Challenge with Spring, Angular and MySQL</span>
+    <span class="spacer"></span>
+    <button mat-icon-button color="accent" aria-label="Adicionar um curso" (click)="onHome()">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
+<router-outlet></router-outlet>
