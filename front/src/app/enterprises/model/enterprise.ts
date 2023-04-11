@@ -1,10 +1,9 @@
 export interface Enterprise {
   _id: string;
-  createBy: string;
-  createdDate: Date;
+  createdBy: string;
+  createdDate: string;
   modifiedBy: string;
-  modifiedDate: Date;
-  category: string;
+  modifiedDate: string;
   status: string;
   address: string;
   name: string;

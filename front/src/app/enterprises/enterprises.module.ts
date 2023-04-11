@@ -4,11 +4,13 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 import { EnterprisesRoutingModule } from './enterprises-routing.module';
 import { EnterprisesComponent } from './enterprises/enterprises.component';
+import { EnterprisesFormComponent } from './enterprises-form/enterprises-form.component';
 
 
 @NgModule({
   declarations: [
-    EnterprisesComponent
+    EnterprisesComponent,
+    EnterprisesFormComponent
   ],
   imports: [
     CommonModule,

@@ -21,18 +21,18 @@ public class Enterprise {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long _id;
 
-    @Column(length= 50, nullable= false)
+    @Column(length= 50, nullable= true)
     private String createdBy;
 
     @CreatedDate
-    @Column(nullable= false)
+    @Column(nullable= true)
     private LocalDateTime createdDate;
 
-    @Column(length= 50, nullable= false)
+    @Column(length= 50, nullable= true)
     private String modifiedBy;
 
     @LastModifiedDate
-    @Column(nullable= false)
+    @Column(nullable= true)
     private LocalDateTime modifiedDate;
 
     @Column(length= 200, nullable= false)

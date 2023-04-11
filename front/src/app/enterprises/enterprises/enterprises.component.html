@@ -1,5 +1,5 @@
 <mat-card>
-  <mat-toolbar color="primary"> Cursos Cadastrados </mat-toolbar>
+  <mat-toolbar color="primary"> Enterprises </mat-toolbar>
 
   <table mat-table [dataSource]="enterprises$" class="mat-elevation-z8">
     <ng-container matColumnDef="_id">
@@ -14,7 +14,7 @@
 
     <ng-container matColumnDef="phone">
       <th mat-header-cell *matHeaderCellDef>Phone</th>
-      <td mat-cell *matCellDef="let element">{{ element.category }}</td>
+      <td mat-cell *matCellDef="let element">{{ element.phone }}</td>
     </ng-container>
 
     <ng-container matColumnDef="actions">
@@ -23,14 +23,14 @@
           <mat-icon>add</mat-icon>
         </button>
       </th>
-      <mat-cell *matCellDef="let element">
+      <td mat-cell *matCellDef="let element">
         <button mat-icon-button color="primary" aria-label="Editar um curso" (click)="onEdit(element)">
           <mat-icon>edit</mat-icon>
         </button>
         <button mat-icon-button color="warn" aria-label="Deletar um curso" (click)="onDelete(element)">
           <mat-icon>delete</mat-icon>
         </button>
-      </mat-cell>
+      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
