@@ -1,0 +1,46 @@
+<mat-card>
+
+  <mat-card-content>
+    <mat-toolbar color="primary">New Colaborator</mat-toolbar>
+    <br>
+
+    <form [formGroup]="form" >
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Colaborator name" formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Colaborator surname" formControlName="surname">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Status</mat-label>
+          <mat-select formControlName="status">
+            <mat-option value="ativo">Ativo</mat-option>
+            <mat-option value="inativo">Inativo</mat-option>
+          </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Email@" formControlName="email">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input type="number" min="18" max="150" matInput placeholder="Colaborator age" formControlName="age">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Position/Role" formControlName="position">
+      </mat-form-field>
+
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="onSubmit()">Salvar</button>
+    <button mat-raised-button (click)="onCancel()">Cancelar</button>
+  </mat-card-actions>
+
+
+</mat-card>

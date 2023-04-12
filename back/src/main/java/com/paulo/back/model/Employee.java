@@ -8,15 +8,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import lombok.Data;
 
 @Data
 @Entity //usado pra definir que essa model eh pra se tornar uma entidade no banco de dados
 //@Table(name = "nome da tabela") //usado ao inves do @Entity quando o nome da tabela eh diferente do modelo
-public class Department {
-    
+public class Employee {
+     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long _id;
@@ -36,17 +34,18 @@ public class Department {
     @Column(length= 200, nullable= false)
     private String status;
 
+    @Column(length= 3, nullable= false)
+    private Integer age;
+
     @Column(length= 200, nullable= false)
-    private String description;
+    private String email;
 
     @Column(length= 200, nullable= false)
     private String name;
 
-    @Column(length= 15, nullable= false)
-    private String phone; 
+    @Column(length= 200, nullable= false)
+    private String position;
 
-    @ManyToOne
-    @JoinColumn(name = "enterprise")
-    private Enterprise enterprise;
-
+    @Column(length= 200, nullable= false)
+    private String surname;
 }
