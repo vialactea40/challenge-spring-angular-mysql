@@ -12,7 +12,7 @@ import { Employee } from '../model/employee';
 export class EmployeesComponent {
 
   employees$: Observable<Employee[]>;
-  displayedColumns = ['_id', 'name','phone','actions'];
+  displayedColumns = ['_id', 'name','surname','email','position','age','actions'];
 
   constructor(
     private employeesService : EmployeesService,
