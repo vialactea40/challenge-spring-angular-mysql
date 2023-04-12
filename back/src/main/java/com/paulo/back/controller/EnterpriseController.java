@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.paulo.back.model.Enterprise;
 import com.paulo.back.repository.EnterpriseRepository;
-
+//restDepartment
 @RestController
 @RequestMapping("/api/enterprises")
 public class EnterpriseController {
