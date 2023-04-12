@@ -15,7 +15,6 @@ import lombok.Data;
 @Data
 @Entity //usado pra definir que essa model eh pra se tornar uma entidade no banco de dados
 //@Table(name = "nome da tabela") //usado ao inves do @Entity quando o nome da tabela eh diferente do modelo
-
 public class Department {
     
     @Id
