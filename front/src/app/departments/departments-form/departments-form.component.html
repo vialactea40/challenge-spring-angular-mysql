@@ -1,0 +1,45 @@
+<mat-card>
+
+  <mat-card-content>
+    <mat-toolbar color="primary">New Department</mat-toolbar>
+    <br>
+
+    <form [formGroup]="form" >
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Department name" formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Status</mat-label>
+          <mat-select formControlName="status">
+            <mat-option value="ativo">Ativo</mat-option>
+            <mat-option value="inativo">Inativo</mat-option>
+          </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Description" formControlName="description">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Phone" formControlName="phone">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Enterprise</mat-label>
+        <mat-select formControlName="enterprise">
+          <mat-option *ngFor="let enterprise of enterprises$ | async" [value]="enterprise">{{enterprise._id}} - {{enterprise.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="onSubmit()">Salvar</button>
+    <button mat-raised-button (click)="onCancel()">Cancelar</button>
+  </mat-card-actions>
+
+
+</mat-card>
